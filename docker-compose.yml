@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  lab1:
+    build: ./Target1
+    ports:
+      - "2222:22"
+    networks:
+      - mynetwork
+
+  lab2:
+    build: ./Target2
+    ports:
+      - 8080:80
+
+networks:
+  mynetwork:
